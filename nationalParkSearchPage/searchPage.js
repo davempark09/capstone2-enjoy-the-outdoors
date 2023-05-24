@@ -4,8 +4,10 @@ const parkParentCont = document.querySelector('#parkSearchCards')
 const viewAllButton = document.querySelector('#viewAllButton')
 const resetButton = document.querySelector('#resetSearch')
 
+
 window.onload = loadSearch
 resetButton.onclick = resetSearchResults
+
 function loadSearch() {
     fillLocations()
     fillParkType()
@@ -69,7 +71,7 @@ function changeLocations(event) {
             if(location.hasOwnProperty('Visit')) {
                 const locationWebsiteInfoButton = document.createElement('a')
                 locationWebsiteInfoButton.setAttribute('href',`${location.Visit}`)
-                locationWebsiteInfoButton.setAttribute('class','btn btn-info')
+                locationWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn')
                 locationWebsiteInfoButton.setAttribute('role','button')
                 locationWebsiteInfoButton.setAttribute('target','_blank')
                 locationWebsiteInfoButton.innerText = 'Official Website'
@@ -111,7 +113,7 @@ function changeLocations(event) {
             if(location.hasOwnProperty('Visit')) {
                 const locationWebsiteInfoButton = document.createElement('a')
                 locationWebsiteInfoButton.setAttribute('href',`${location.Visit}`)
-                locationWebsiteInfoButton.setAttribute('class','btn btn-info')
+                locationWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn')
                 locationWebsiteInfoButton.setAttribute('role','button')
                 locationWebsiteInfoButton.setAttribute('target','_blank')
                 locationWebsiteInfoButton.innerText = 'Official Website'
@@ -158,7 +160,7 @@ function changeParkType(event) {
         if(parkType.hasOwnProperty('Visit')) {
             const parkTypeWebsiteInfoButton = document.createElement('a')
             parkTypeWebsiteInfoButton.setAttribute('href',`${parkType.Visit}`)
-            parkTypeWebsiteInfoButton.setAttribute('class','btn btn-info')
+            parkTypeWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn')
             parkTypeWebsiteInfoButton.setAttribute('role','button')
             parkTypeWebsiteInfoButton.setAttribute('target','_blank')
             parkTypeWebsiteInfoButton.innerText = 'Official Website'
@@ -200,7 +202,7 @@ function changeParkType(event) {
         if(parkType.hasOwnProperty('Visit')) {
             const parkTypeWebsiteInfoButton = document.createElement('a')
             parkTypeWebsiteInfoButton.setAttribute('href',`${parkType.Visit}`)
-            parkTypeWebsiteInfoButton.setAttribute('class','btn btn-info')
+            parkTypeWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn')
             parkTypeWebsiteInfoButton.setAttribute('role','button')
             parkTypeWebsiteInfoButton.setAttribute('target','_blank')
             parkTypeWebsiteInfoButton.innerText = 'Official Website'
@@ -248,7 +250,7 @@ function viewAllEvent(event) {
         if(allParks.hasOwnProperty('Visit')) {
             const allParksWebsiteInfoButton = document.createElement('a')
             allParksWebsiteInfoButton.setAttribute('href',`${allParks.Visit}`)
-            allParksWebsiteInfoButton.setAttribute('class','btn btn-info')
+            allParksWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn')
             allParksWebsiteInfoButton.setAttribute('role','button')
             allParksWebsiteInfoButton.setAttribute('target','_blank')
             allParksWebsiteInfoButton.innerText = 'Official Website'

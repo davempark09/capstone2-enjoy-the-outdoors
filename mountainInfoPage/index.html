@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="entirePage">
 
 <head>
     <meta charset="UTF-8">
@@ -14,41 +14,46 @@
     <link rel="stylesheet" href="/style.css">
     <script defer src="/scripts/mountainData.js"></script>
     <script defer src="/mountainInfoPage/infoPage.js"></script>
+    <script defer src="/main.js"></script>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Nature's Frontier</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/nationalParkSearchPage/">National Park Search</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/mountainInfoPage/">Mountain
-                            Information</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Nature's Frontier</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/nationalParkSearchPage/">National Park Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/mountainInfoPage/">Mountain
+                                Information</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn-dark" type="button" id="darkMode">Dark Mode
+                </button>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main class="container">
-        <div class="searchBoxes">
+        <div class="searchBoxes mx-auto my-5">
             <form>
-                <select name="mountainInfo" id="mountainInfo">
+                <select class="form-select" name="mountainInfo" id="mountainInfo">
                     <option value=''>Choose a mountain</option>
                 </select>
-                <input type="reset" value="Reset" id="resetSearch"></input>
+                <input type="reset" class="btn btn-danger mt-3" value="Reset" id="resetSearch"></input>
             </form>
         </div>
         <div id="mountainInfoCards"></div>

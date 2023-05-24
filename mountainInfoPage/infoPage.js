@@ -2,6 +2,7 @@ const mountainInfo = document.querySelector('#mountainInfo');
 const mountainParentCont = document.querySelector('#mountainInfoCards')
 const resetButton = document.querySelector('#resetSearch')
 
+
 window.onload = loadMountains
 resetButton.onclick = resetSearchResults
 
