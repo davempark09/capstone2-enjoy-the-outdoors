@@ -1,5 +1,6 @@
 const darkModeButton = document.querySelector('#darkMode')
 const entirePage = document.querySelector('#entirePage')
+const currentTime = document.querySelector('#currentTime')
 darkModeButton.onclick = darkModeToggle
 
 function darkModeToggle() {
@@ -11,3 +12,6 @@ function darkModeToggle() {
         darkModeButton.setAttribute('class','btn btn-light')
     }
 }
+const dateTime = new Date().toLocaleDateString()
+currentTime.innerText = `Current Date: ${dateTime}`
+

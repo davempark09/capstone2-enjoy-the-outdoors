@@ -32,7 +32,7 @@ function mountainInfoChange(event) {
     mountainParentCont.replaceChildren()
 
         const mountainCard = document.createElement('div')
-        mountainCard.setAttribute('class','card')
+        mountainCard.setAttribute('class','card mountainCards')
         const mountainCardImg = document.createElement('img')
         mountainCardImg.setAttribute('class','card-img-top')
         mountainCardImg.setAttribute('src',`/images/${matchedMountain.img}`)
