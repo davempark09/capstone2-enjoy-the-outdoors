@@ -20,12 +20,13 @@
 
 <body>
 
+    <!-- Navbar -->
     <div id="pageContainer">
         <header>
             <nav class="navbar navbar-expand-sm bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/"><img src="/myImages/logo.png" alt="Site Logo" width="60px"
-                            height="60px"></a>
+                    <a class="navbar-brand" href="/"><img src="/myImages/logo.png" alt="Site Logo" width="60"
+                            height="60"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -43,12 +44,13 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="btn btn-dark" type="button" id="darkMode">Dark Mode
+                    <button class="btn btn-dark btn-sm" type="button" id="darkMode">Dark Mode
                     </button>
                 </div>
             </nav>
         </header>
 
+        <!-- Main Content -->
         <div id="contentContainer">
             <main class="container">
                 <div class="searchBoxes mx-auto my-5">
@@ -56,15 +58,16 @@
                         <select class="form-select" name="mountainInfo" id="mountainInfo">
                             <option value=''>Choose a mountain</option>
                         </select>
-                        <input type="reset" class="btn btn-danger mt-3" value="Reset" id="resetSearch"></input>
+                        <input type="reset" class="btn btn-danger mt-3 btn-sm" value="Reset" id="resetSearch">
                     </form>
                 </div>
-                <div id="mountainInfoCards">
+                <div id="mountainInfoCards" class="d-flex justify-content-center">
                 </div>
             </main>
         </div>
 
-        <footer id="footer" class="container-fluid mt-3 bg-body-tertiary pt-2">
+        <!-- Footer -->
+        <footer id="footer" class="container-fluid bg-body-tertiary pt-2">
             <div class="row">
                 <div class="col-4">
                     <h5 class="closer"><i class="fa-solid fa-copyright"></i> Copyright</h5>

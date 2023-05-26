@@ -1,3 +1,6 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 .searchBoxes {
     max-width: 15rem;
 }
@@ -10,25 +13,54 @@
 .homePageCont {
     margin-top: 1rem;
 }
+
+/* Footer content design */
 .closer {
     margin-bottom: 0;
 }
+.bottomNav {
+    text-decoration: none;
+    color:unset;
+}
 
+/* Card designs for the mountain page */
+.mountainImages {
+    width: fit-content;
+    height: fit-content;
+}
+.mountainCards {
+    width: 21rem;
+    height: fit-content;
+}
+
+/* Getting footer to stay at the bottom of the page */
 #pageContainer {
-  position: relative;
-  min-height: 100vh;
+    position: relative;
+    min-height: 100vh;
 }
 
 #contentContainer {
-  padding-bottom: 7rem;  
+    padding-bottom: 7rem;  
 }
 
 #footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
-/* .mountainCards {
-    width: 500px;
-    height: 200px
-} */
+
+/* Homepage image animation */
+@keyframes homepageImage {
+    0%, 100%   {background-image:url(/myImages/homepageImage.jpg)}
+    25%  {background-image:url(/myImages/homepageImage2.jpg)}
+    50%  {background-image:url(/myImages/homepageImage3.jpg)}
+    75%  {background-image:url(/myImages/homepageImage4.jpg)}
+}
+.imageCont {
+    width: 90vw;
+    height: 90vh;
+    background-size: cover;
+    background-image:url(/myImages/homepageImage.jpg);
+    animation: homepageImage 30s  forwards reverse ease infinite;
+}
+

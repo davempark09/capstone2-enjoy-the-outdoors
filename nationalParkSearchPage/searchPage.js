@@ -4,19 +4,24 @@ const parkParentCont = document.querySelector('#parkSearchCards')
 const viewAllButton = document.querySelector('#viewAllButton')
 const resetButton = document.querySelector('#resetSearch')
 
-
+//Runnning the function when the page loads
 window.onload = loadSearch
+
+//Setting up onclick event for the reset button
 resetButton.onclick = resetSearchResults
 
+//Running the functions to populate both dropdowns
 function loadSearch() {
     fillLocations()
     fillParkType()
 }
 
+//Reset button function
 function resetSearchResults() {
     parkParentCont.replaceChildren()
 }
 
+//Function to populate the location dropdown
 function fillLocations() {
     locationSearch.onchange = changeLocations
     for(const location of locationsArray) {
@@ -27,6 +32,7 @@ function fillLocations() {
     }
 }
 
+//Function to populate the park type dropdown
 function fillParkType() {
     parkTypeSearch.onchange = changeParkType
     for(const parkType of parkTypesArray) {
@@ -37,10 +43,12 @@ function fillParkType() {
     }
 }
 
+//Function to handle user change of location
 function changeLocations(event) {
     const selectedLocationSearch = event.target.value
     const selectedLocation = nationalParksArray.filter(location => location.State.toLowerCase() === selectedLocationSearch.toLowerCase())
     parkParentCont.replaceChildren()
+    //Conditional to check if other dropdown box has a value the user already chose
     if(parkTypeSearch.value === '') {
         for(const location of selectedLocation) {
             const locationWikiLink = location.LocationName.split(' ').join('_')
@@ -62,7 +70,7 @@ function changeLocations(event) {
             locationCardLongLat.innerText = `Longitude: ${location.Longitude} / Latitude: ${location.Latitude}`
             const locationMoreInfoButton = document.createElement('a')
             locationMoreInfoButton.setAttribute('href',`https://en.wikipedia.org/wiki/${locationWikiLink}`)
-            locationMoreInfoButton.setAttribute('class','btn btn-info')
+            locationMoreInfoButton.setAttribute('class','btn btn-info btn-sm')
             locationMoreInfoButton.setAttribute('role','button')
             locationMoreInfoButton.setAttribute('target','_blank')
             locationMoreInfoButton.innerText = 'More Information'
@@ -71,7 +79,7 @@ function changeLocations(event) {
             if(location.hasOwnProperty('Visit')) {
                 const locationWebsiteInfoButton = document.createElement('a')
                 locationWebsiteInfoButton.setAttribute('href',`${location.Visit}`)
-                locationWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn')
+                locationWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn btn-sm')
                 locationWebsiteInfoButton.setAttribute('role','button')
                 locationWebsiteInfoButton.setAttribute('target','_blank')
                 locationWebsiteInfoButton.innerText = 'Official Website'
@@ -104,7 +112,7 @@ function changeLocations(event) {
             locationCardLongLat.innerText = `Longitude: ${location.Longitude} / Latitude: ${location.Latitude}`
             const locationMoreInfoButton = document.createElement('a')
             locationMoreInfoButton.setAttribute('href',`https://en.wikipedia.org/wiki/${locationWikiLink}`)
-            locationMoreInfoButton.setAttribute('class','btn btn-info')
+            locationMoreInfoButton.setAttribute('class','btn btn-info btn-sm')
             locationMoreInfoButton.setAttribute('role','button')
             locationMoreInfoButton.setAttribute('target','_blank')
             locationMoreInfoButton.innerText = 'More Information'
@@ -113,7 +121,7 @@ function changeLocations(event) {
             if(location.hasOwnProperty('Visit')) {
                 const locationWebsiteInfoButton = document.createElement('a')
                 locationWebsiteInfoButton.setAttribute('href',`${location.Visit}`)
-                locationWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn')
+                locationWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn btn-sm')
                 locationWebsiteInfoButton.setAttribute('role','button')
                 locationWebsiteInfoButton.setAttribute('target','_blank')
                 locationWebsiteInfoButton.innerText = 'Official Website'
@@ -127,10 +135,12 @@ function changeLocations(event) {
     }
 }
 
+//Function to handle the user choice of park type
 function changeParkType(event) {
     const selectedParkTypeSearch = event.target.value
     const selectedParkType = nationalParksArray.filter(parkType => parkType.LocationName.toLowerCase().includes(selectedParkTypeSearch.toLowerCase()))
     parkParentCont.replaceChildren()
+    //Conditional to check if other dropdown box has a value the user already chose
     if(locationSearch.value === '') {
         for(const parkType of selectedParkType) {
         const parkTypeWikiLink = parkType.LocationName.split(' ').join('_')
@@ -152,7 +162,7 @@ function changeParkType(event) {
         parkTypeCardLongLat.innerText = `Longitude: ${parkType.Longitude} / Latitude: ${parkType.Latitude}`
         const parkTypeMoreInfoButton = document.createElement('a')
         parkTypeMoreInfoButton.setAttribute('href',`https://en.wikipedia.org/wiki/${parkTypeWikiLink}`)
-        parkTypeMoreInfoButton.setAttribute('class','btn btn-info')
+        parkTypeMoreInfoButton.setAttribute('class','btn btn-info btn-sm')
         parkTypeMoreInfoButton.setAttribute('role','button')
         parkTypeMoreInfoButton.setAttribute('target','_blank')
         parkTypeMoreInfoButton.innerText = 'More Information'
@@ -160,7 +170,7 @@ function changeParkType(event) {
         if(parkType.hasOwnProperty('Visit')) {
             const parkTypeWebsiteInfoButton = document.createElement('a')
             parkTypeWebsiteInfoButton.setAttribute('href',`${parkType.Visit}`)
-            parkTypeWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn')
+            parkTypeWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn btn-sm')
             parkTypeWebsiteInfoButton.setAttribute('role','button')
             parkTypeWebsiteInfoButton.setAttribute('target','_blank')
             parkTypeWebsiteInfoButton.innerText = 'Official Website'
@@ -194,7 +204,7 @@ function changeParkType(event) {
         parkTypeCardLongLat.innerText = `Longitude: ${parkType.Longitude} / Latitude: ${parkType.Latitude}`
         const parkTypeMoreInfoButton = document.createElement('a')
         parkTypeMoreInfoButton.setAttribute('href',`https://en.wikipedia.org/wiki/${parkTypeWikiLink}`)
-        parkTypeMoreInfoButton.setAttribute('class','btn btn-info')
+        parkTypeMoreInfoButton.setAttribute('class','btn btn-info btn-sm')
         parkTypeMoreInfoButton.setAttribute('role','button')
         parkTypeMoreInfoButton.setAttribute('target','_blank')
         parkTypeMoreInfoButton.innerText = 'More Information'
@@ -202,7 +212,7 @@ function changeParkType(event) {
         if(parkType.hasOwnProperty('Visit')) {
             const parkTypeWebsiteInfoButton = document.createElement('a')
             parkTypeWebsiteInfoButton.setAttribute('href',`${parkType.Visit}`)
-            parkTypeWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn')
+            parkTypeWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn btn-sm')
             parkTypeWebsiteInfoButton.setAttribute('role','button')
             parkTypeWebsiteInfoButton.setAttribute('target','_blank')
             parkTypeWebsiteInfoButton.innerText = 'Official Website'
@@ -217,8 +227,10 @@ function changeParkType(event) {
     }
 }
 
+//Setting up onclick event on the button to view all places
 viewAllButton.onclick = viewAllEvent
 
+//Function for the view all button click
 function viewAllEvent(event) {
     event.preventDefault()
     parkParentCont.replaceChildren()
@@ -242,7 +254,7 @@ function viewAllEvent(event) {
         allParksCardLongLat.innerText = `Longitude: ${allParks.Longitude} / Latitude: ${allParks.Latitude}`
         const allParksMoreInfoButton = document.createElement('a')
         allParksMoreInfoButton.setAttribute('href',`https://en.wikipedia.org/wiki/${allParksWikiLink}`)
-        allParksMoreInfoButton.setAttribute('class','btn btn-info')
+        allParksMoreInfoButton.setAttribute('class','btn btn-info btn-sm')
         allParksMoreInfoButton.setAttribute('role','button')
         allParksMoreInfoButton.setAttribute('target','_blank')
         allParksMoreInfoButton.innerText = 'More Information'
@@ -250,7 +262,7 @@ function viewAllEvent(event) {
         if(allParks.hasOwnProperty('Visit')) {
             const allParksWebsiteInfoButton = document.createElement('a')
             allParksWebsiteInfoButton.setAttribute('href',`${allParks.Visit}`)
-            allParksWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn')
+            allParksWebsiteInfoButton.setAttribute('class','btn btn-info sideBtn btn-sm')
             allParksWebsiteInfoButton.setAttribute('role','button')
             allParksWebsiteInfoButton.setAttribute('target','_blank')
             allParksWebsiteInfoButton.innerText = 'Official Website'

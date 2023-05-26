@@ -22,13 +22,13 @@
 
 <body>
 
+    <!-- Navbar -->
     <div id="pageContainer">
-
         <header>
             <nav class="navbar navbar-expand-sm bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/"><img src="/myImages/logo.png" alt="Site Logo" width="60px"
-                            height="60px"></a>
+                    <a class="navbar-brand" href="/"><img src="/myImages/logo.png" alt="Site Logo" width="60"
+                            height="60"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -47,12 +47,13 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="btn btn-dark" type="button" id="darkMode">Dark Mode
+                    <button class="btn btn-dark btn-sm" type="button" id="darkMode">Dark Mode
                     </button>
                 </div>
             </nav>
         </header>
 
+        <!-- Main content -->
         <div id="contentContainer">
             <main class="container">
                 <div class="searchBoxes mx-auto my-5">
@@ -60,20 +61,22 @@
                         <select class="form-select" name="searchLocation" id="searchLocation">
                             <option value=''>Choose a location</option>
                         </select>
-                        <h4>and/or</h4>
+                        <h5>and/or</h5>
                         <select class="form-select" name="searchParkType" id="searchParkType">
                             <option value=''>Choose a park type</option>
                         </select>
-                        <button type='button' class="btn btn-success mt-3" id="viewAllButton">View All Parks</button>
-                        <input type="reset" class="btn btn-danger mt-3" value="Reset" id="resetSearch"></input>
+                        <button type='button' class="btn btn-success mt-3 btn-sm" id="viewAllButton">View All
+                            Parks</button>
+                        <input type="reset" class="btn btn-danger mt-3 btn-sm" value="Reset" id="resetSearch">
                     </form>
                 </div>
-                <div id="parkSearchCards" class="row">
+                <div id="parkSearchCards">
                 </div>
             </main>
         </div>
 
-        <footer id="footer" class="container-fluid mt-3 bg-body-tertiary pt-2">
+        <!-- Footer -->
+        <footer id="footer" class="container-fluid bg-body-tertiary pt-2">
             <div class="row">
                 <div class="col-4">
                     <h5 class="closer"><i class="fa-solid fa-copyright"></i> Copyright</h5>
@@ -93,7 +96,7 @@
                     <h5 class="closer">Contact Info</h5>
                     <p class="closer">E-mail: davempark@gmail.com</p>
                     <p class="closer">Phone: 516-660-3127</p>
-                    <p class="closer">Phone: ###-###-####</p>
+                    <p class="closer">Fax: ###-###-####</p>
                 </div>
             </div>
         </footer>
