@@ -62,9 +62,18 @@ function changeLocations(event) {
             const locationCardAddress = document.createElement('p')
             locationCardAddress.setAttribute('class','card-text')
             locationCardAddress.innerText = `Address: ${location.Address}, ${location.City}, ${location.State} ${location.ZipCode}`
-            const locationCardPhoneFax = document.createElement('p')
-            locationCardPhoneFax.setAttribute('class','card-text')
-            locationCardPhoneFax.innerText = `Phone: ${location.Phone} / Fax: ${location.Fax}`
+            if(location.Phone !== 0) {
+                const locationCardPhone = document.createElement('p')
+                locationCardPhone.setAttribute('class','card-text')
+                locationCardPhone.innerText = `Phone: ${location.Phone}`
+                locationCardBody.append(locationCardPhone)
+            }
+            if(location.Fax !== 0) {
+                const locationCardFax = document.createElement('p')
+                locationCardFax.setAttribute('class','card-text')
+                locationCardFax.innerText = `Fax: ${location.Fax}`
+                locationCardBody.append(locationCardFax)
+            }
             const locationCardLongLat = document.createElement('p')
             locationCardLongLat.setAttribute('class','card-text')
             locationCardLongLat.innerText = `Longitude: ${location.Longitude} / Latitude: ${location.Latitude}`
@@ -86,7 +95,8 @@ function changeLocations(event) {
                 locationCardBody.append(locationWebsiteInfoButton)
             }
         
-            locationCardBody.prepend(locationCardTitle,locationCardAddress,locationCardPhoneFax,locationCardLongLat,locationMoreInfoButton)
+            locationCardBody.prepend(locationCardTitle,locationCardAddress,locationCardLongLat,locationMoreInfoButton)
+            locationCardBody.append(locationMoreInfoButton)
             locationCard.append(locationCardBody)
             parkParentCont.append(locationCard)
         }
@@ -104,9 +114,18 @@ function changeLocations(event) {
             const locationCardAddress = document.createElement('p')
             locationCardAddress.setAttribute('class','card-text')
             locationCardAddress.innerText = `Address: ${location.Address}, ${location.City}, ${location.State} ${location.ZipCode}`
-            const locationCardPhoneFax = document.createElement('p')
-            locationCardPhoneFax.setAttribute('class','card-text')
-            locationCardPhoneFax.innerText = `Phone: ${location.Phone} / Fax: ${location.Fax}`
+            if(location.Phone !== 0) {
+                const locationCardPhone = document.createElement('p')
+                locationCardPhone.setAttribute('class','card-text')
+                locationCardPhone.innerText = `Phone: ${location.Phone}`
+                locationCardBody.append(locationCardPhone)
+            }
+            if(location.Fax !== 0) {
+                const locationCardFax = document.createElement('p')
+                locationCardFax.setAttribute('class','card-text')
+                locationCardFax.innerText = `Fax: ${location.Fax}`
+                locationCardBody.append(locationCardFax)
+            }
             const locationCardLongLat = document.createElement('p')
             locationCardLongLat.setAttribute('class','card-text')
             locationCardLongLat.innerText = `Longitude: ${location.Longitude} / Latitude: ${location.Latitude}`
@@ -128,7 +147,8 @@ function changeLocations(event) {
                 locationCardBody.append(locationWebsiteInfoButton)
             }
         
-            locationCardBody.prepend(locationCardTitle,locationCardAddress,locationCardPhoneFax,locationCardLongLat,locationMoreInfoButton)
+            locationCardBody.prepend(locationCardTitle,locationCardAddress,locationCardLongLat,locationMoreInfoButton)
+            locationCardBody.append(locationMoreInfoButton)
             locationCard.append(locationCardBody)
             parkParentCont.append(locationCard)
         }
@@ -154,9 +174,18 @@ function changeParkType(event) {
         const parkTypeCardAddress = document.createElement('p')
         parkTypeCardAddress.setAttribute('class','card-text')
         parkTypeCardAddress.innerText = `Address: ${parkType.Address}, ${parkType.City}, ${parkType.State} ${parkType.ZipCode}`
-        const parkTypeCardPhoneFax = document.createElement('p')
-        parkTypeCardPhoneFax.setAttribute('class','card-text')
-        parkTypeCardPhoneFax.innerText = `Phone: ${parkType.Phone} / Fax: ${parkType.Fax}`
+        if(parkType.Phone !== 0) {
+            const parkTypeCardPhone = document.createElement('p')
+            parkTypeCardPhone.setAttribute('class','card-text')
+            parkTypeCardPhone.innerText = `Phone: ${parkType.Phone}`
+            parkTypeCardBody.append(parkTypeCardPhone)
+        }
+        if(parkType.Fax !== 0) {
+            const parkTypeCardFax = document.createElement('p')
+            parkTypeCardFax.setAttribute('class','card-text')
+            parkTypeCardFax.innerText = `Fax: ${parkType.Fax}`
+            parkTypeCardBody.append(parkTypeCardFax)
+        }
         const parkTypeCardLongLat = document.createElement('p')
         parkTypeCardLongLat.setAttribute('class','card-text')
         parkTypeCardLongLat.innerText = `Longitude: ${parkType.Longitude} / Latitude: ${parkType.Latitude}`
@@ -178,7 +207,8 @@ function changeParkType(event) {
         }
         
 
-            parkTypeCardBody.prepend(parkTypeCardTitle,parkTypeCardAddress,parkTypeCardPhoneFax,parkTypeCardLongLat,parkTypeMoreInfoButton)
+            parkTypeCardBody.prepend(parkTypeCardTitle,parkTypeCardAddress,parkTypeCardLongLat,parkTypeMoreInfoButton)
+            parkTypeCardBody.append(parkTypeMoreInfoButton)
             parkTypeCard.append(parkTypeCardBody)
             parkParentCont.append(parkTypeCard)
         }
@@ -196,9 +226,18 @@ function changeParkType(event) {
         const parkTypeCardAddress = document.createElement('p')
         parkTypeCardAddress.setAttribute('class','card-text')
         parkTypeCardAddress.innerText = `Address: ${parkType.Address}, ${parkType.City}, ${parkType.State} ${parkType.ZipCode}`
-        const parkTypeCardPhoneFax = document.createElement('p')
-        parkTypeCardPhoneFax.setAttribute('class','card-text')
-        parkTypeCardPhoneFax.innerText = `Phone: ${parkType.Phone} / Fax: ${parkType.Fax}`
+        if(parkType.Phone !== 0) {
+            const parkTypeCardPhone = document.createElement('p')
+            parkTypeCardPhone.setAttribute('class','card-text')
+            parkTypeCardPhone.innerText = `Phone: ${parkType.Phone}`
+            parkTypeCardBody.append(parkTypeCardPhone)
+        }
+        if(parkType.Fax !== 0) {
+            const parkTypeCardFax = document.createElement('p')
+            parkTypeCardFax.setAttribute('class','card-text')
+            parkTypeCardFax.innerText = `Fax: ${parkType.Fax}`
+            parkTypeCardBody.append(parkTypeCardFax)
+        }
         const parkTypeCardLongLat = document.createElement('p')
         parkTypeCardLongLat.setAttribute('class','card-text')
         parkTypeCardLongLat.innerText = `Longitude: ${parkType.Longitude} / Latitude: ${parkType.Latitude}`
@@ -220,7 +259,8 @@ function changeParkType(event) {
         }
         
 
-            parkTypeCardBody.prepend(parkTypeCardTitle,parkTypeCardAddress,parkTypeCardPhoneFax,parkTypeCardLongLat,parkTypeMoreInfoButton)
+            parkTypeCardBody.prepend(parkTypeCardTitle,parkTypeCardAddress,parkTypeCardLongLat,parkTypeMoreInfoButton)
+            parkTypeCardBody.append(parkTypeMoreInfoButton)
             parkTypeCard.append(parkTypeCardBody)
             parkParentCont.append(parkTypeCard)
         }
@@ -246,9 +286,18 @@ function viewAllEvent(event) {
         const allParksCardAddress = document.createElement('p')
         allParksCardAddress.setAttribute('class','card-text')
         allParksCardAddress.innerText = `Address: ${allParks.Address}, ${allParks.City}, ${allParks.State} ${allParks.ZipCode}`
-        const allParksCardPhoneFax = document.createElement('p')
-        allParksCardPhoneFax.setAttribute('class','card-text')
-        allParksCardPhoneFax.innerText = `Phone: ${allParks.Phone} / Fax: ${allParks.Fax}`
+        if(allParks.Phone !== 0) {
+            const allParksCardPhone = document.createElement('p')
+            allParksCardPhone.setAttribute('class','card-text')
+            allParksCardPhone.innerText = `Phone: ${allParks.Phone}`
+            allParksCardBody.append(allParksCardPhone)
+        }
+        if(allParks.Fax !== 0) {
+            const allParksCardFax = document.createElement('p')
+            allParksCardFax.setAttribute('class','card-text')
+            allParksCardFax.innerText = `Fax: ${allParks.Fax}`
+            allParksCardBody.append(allParksCardFax)
+        }
         const allParksCardLongLat = document.createElement('p')
         allParksCardLongLat.setAttribute('card','card-text')
         allParksCardLongLat.innerText = `Longitude: ${allParks.Longitude} / Latitude: ${allParks.Latitude}`
@@ -269,7 +318,8 @@ function viewAllEvent(event) {
             allParksCardBody.append(allParksWebsiteInfoButton)
         }
 
-        allParksCardBody.prepend(allParksCardTitle,allParksCardAddress,allParksCardPhoneFax,allParksCardLongLat,allParksMoreInfoButton)
+        allParksCardBody.prepend(allParksCardTitle,allParksCardAddress,allParksCardLongLat)
+        allParksCardBody.append(allParksMoreInfoButton)
         allParksCard.append(allParksCardBody)
         parkParentCont.append(allParksCard)
     }
