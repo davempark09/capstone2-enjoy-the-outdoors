@@ -50,6 +50,9 @@ function mountainInfoChange(event) {
         const mountainCardDesc = document.createElement('p')
         mountainCardDesc.setAttribute('class','card-text')
         mountainCardDesc.innerText = matchedMountain.desc
+        const mountainCardDiff = document.createElement('p')
+        mountainCardDiff.setAttribute('class','card-text')
+        mountainCardDiff.innerText = `Difficulty: ${matchedMountain.effort}`
         const mountainCardElev = document.createElement('p')
         mountainCardElev.setAttribute('class','card-text')
         mountainCardElev.innerText = `Elevation: ${matchedMountain.elevation} feet`
@@ -69,7 +72,7 @@ function mountainInfoChange(event) {
         mountainSunset.innerHTML = `Sunset (UTC): ${data.results.sunset}`
         mountainCardBody.append(mountainSunrise,mountainSunset)
 });
-        mountainCardBody.prepend(mountrainCardTitle,mountainCardDesc,mountainCardElev,mountainMoreInfoButton)
+        mountainCardBody.prepend(mountrainCardTitle,mountainCardDesc,mountainCardDiff,mountainCardElev,mountainMoreInfoButton)
         mountainCard.append(mountainCardImg,mountainCardBody)
         mountainParentCont.append(mountainCard)
 }
