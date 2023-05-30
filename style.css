@@ -63,4 +63,6 @@ body {
     background-image:url(/myImages/homepageImage.jpg);
     animation: homepageImage 30s  forwards reverse ease infinite;
 }
-
+.logo {
+    mix-blend-mode:difference;
+}
